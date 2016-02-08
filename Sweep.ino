@@ -45,24 +45,14 @@ void loop() {
 
 }
 
-// Fills the colums dots one after the other with a color
+// Fills a colums of dots one after the other with a one single color then another color.
 void colorWipe(uint32_t c, uint8_t wait) {
   for(uint16_t i=0; i<COLUMS; i++) {
 
-    
-    strip.setPixelColor(i+(COLUMS*(ROWS-4)),c);
-
-    strip.setPixelColor(i+(COLUMS*(ROWS-3)),c);
-    
-
-    
-    strip.setPixelColor(i+(COLUMS*(ROWS-2)),c);
-    
-    
-    strip.setPixelColor(i+(COLUMS*(ROWS-1)),c);
+    for (uint16_t r=(-ROWS); r> (ROWS); r--){
+      strip.setPixelColor(i+(COLUMS*(ROWS-r)),c);
+    }
     strip.show();
     delay(wait);
-
-
   }
 }
