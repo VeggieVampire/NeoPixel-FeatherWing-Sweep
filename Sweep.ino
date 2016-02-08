@@ -9,6 +9,10 @@
 #define COLUMS 8 //Count your LEDS to the right
 #define SPEED 100 //faster the lower the number
 
+long randNumber;
+long randNumber2;
+long randNumber3;
+
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
 // Parameter 3 = pixel type flags, add together as needed:
@@ -33,14 +37,13 @@ void setup() {
 }
 
 void loop() {
-  // Some example procedures showing how to display to the pixels:
-  colorWipe(strip.Color(3, 0, 0), SPEED); // Red
-  colorWipe(strip.Color(0, 3, 0), SPEED); // Green
-  colorWipe(strip.Color(0, 1, 3), SPEED); // Blue
-  colorWipe(strip.Color(3, 3, 0), SPEED);
-  colorWipe(strip.Color(3, 3, 3), SPEED);
-  colorWipe(strip.Color(0, 3, 3), SPEED);
-  colorWipe(strip.Color(3, 0, 3), SPEED);
+  // Some example procedures showing how to display to the pixels: 
+  //random numbers from 1 to 255
+  randNumber = random(1, 255);
+  randNumber2 = random(1, 255);
+  randNumber3 = random(1, 255);
+  colorWipe(strip.Color(randNumber, randNumber2, randNumber3), SPEED); // random color
+
 
 
 }
