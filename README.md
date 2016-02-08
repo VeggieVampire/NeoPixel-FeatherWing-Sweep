@@ -1,2 +1,2 @@
 # NeoPixel-FeatherWing-Sweep
-Fills a colums dots one after the other with a one color
+Fills a colums of dots one after the other with a one single color then another color.
